@@ -1,20 +1,50 @@
 import uuid
 import hashlib
- 
-def hash_password(password):
-    # uuid is used to generate a random number
+import random
+import string
+
+def createPasswordEasy(length):
+    letters = string.ascii_letters
+    return ''.join(random.choice(letters) for i in range(length))
+
+def createPasswordMedium(length):
+    lettersAndDigits = string.ascii_letters + string.digits
+    return ''.join(random.choice(lettersAndDigits) for i in range(length))
+
+def createPasswordHard(length):
+    password_characters = string.ascii_letters + string.digits + string.punctuation
+    return ''.join(random.choice(password_characters) for i in range(length))
+
+def hashPassword(password):
     salt = uuid.uuid4().hex
     return hashlib.sha256(salt.encode() + password.encode()).hexdigest() + ':' + salt
-    
-def check_password(hashed_password, user_password):
-    password, salt = hashed_password.split(':')
-    return password == hashlib.sha256(salt.encode() + user_password.encode()).hexdigest()
- 
-new_pass = raw_input('Please enter a password: ')
-hashed_password = hash_password(new_pass)
-print('The string to store in the db is: ' + hashed_password)
-old_pass = raw_input('Now please enter the password again to check: ')
-if check_password(hashed_password, old_pass):
-    print('You entered the right password')
-else:
-    print('I am sorry but the password does not match')
+
+def main():
+    f = open("hashes.txt","w+")
+    print("Easy Passwords: ")
+    for i in range(10):
+        password = createPasswordEasy(10)
+        hash = hashPassword(password)
+        print("Password: ", password)
+        print("Hash: ", hash)
+        f.write(hash)
+        f.write("\n")
+    print("Medium Passwords: ")
+    for i in range(10):
+        password = createPasswordMedium(10)
+        hash = hashPassword(password)
+        print("Password: ", password)
+        print("Hash: ", hash)
+        f.write(hash)
+        f.write("\n")
+    print("Hard Passwords: ")
+    for i in range(10):
+        password = createPasswordHard(10)
+        hash = hashPassword(password)
+        print("Password: ", password)
+        print("Hash: ", hash)
+        f.write(hash)
+        f.write("\n")
+    f.close() 
+
+main()
