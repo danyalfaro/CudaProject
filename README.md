@@ -85,7 +85,7 @@ To gather the complete results from the project, those 3 steps were repeated for
 
 ## Authors
 
-* **Daniel Alfaro R.** - *Initial work* - [Daniel Alfaro R.](https://github.com/danyalfaro)
+* **Daniel Alfaro R.** - *ReadMe* - [Daniel Alfaro R.](https://github.com/danyalfaro)
 
 
 
