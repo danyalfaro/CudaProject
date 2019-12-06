@@ -22,8 +22,7 @@ def md5(length, f):
     print("Easy Passwords: ")
     for i in range(10):
         password = createPasswordEasy(length)
-        salt = uuid.uuid4().hex
-        hash = hashlib.md5(salt.encode() + password.encode()).hexdigest() + ':' + salt
+        hash = hashlib.md5(password.encode()).hexdigest()
         print("Password: ", password)
         print("Hash: ", hash)
         f.write(hash)
@@ -31,8 +30,7 @@ def md5(length, f):
     print("Medium Passwords: ")
     for i in range(10):
         password = createPasswordMedium(length)
-        salt = uuid.uuid4().hex
-        hash = hashlib.md5(salt.encode() + password.encode()).hexdigest() + ':' + salt
+        hash = hashlib.md5(password.encode()).hexdigest()
         print("Password: ", password)
         print("Hash: ", hash)
         f.write(hash)
@@ -40,8 +38,7 @@ def md5(length, f):
     print("Hard Passwords: ")
     for i in range(10):
         password = createPasswordHard(length)
-        salt = uuid.uuid4().hex
-        hash = hashlib.md5(salt.encode() + password.encode()).hexdigest() + ':' + salt
+        hash = hashlib.md5(password.encode()).hexdigest()
         print("Password: ", password)
         print("Hash: ", hash)
         f.write(hash)
@@ -52,8 +49,7 @@ def sha1(length, f):
     print("Easy Passwords: ")
     for i in range(10):
         password = createPasswordEasy(length)
-        salt = uuid.uuid4().hex
-        hash = hashlib.sha1(salt.encode() + password.encode()).hexdigest() + ':' + salt
+        hash = hashlib.sha1(password.encode()).hexdigest()
         print("Password: ", password)
         print("Hash: ", hash)
         f.write(hash)
@@ -61,8 +57,7 @@ def sha1(length, f):
     print("Medium Passwords: ")
     for i in range(10):
         password = createPasswordMedium(length)
-        salt = uuid.uuid4().hex
-        hash = hashlib.sha1(salt.encode() + password.encode()).hexdigest() + ':' + salt
+        hash = hashlib.sha1(password.encode()).hexdigest()
         print("Password: ", password)
         print("Hash: ", hash)
         f.write(hash)
@@ -70,8 +65,7 @@ def sha1(length, f):
     print("Hard Passwords: ")
     for i in range(10):
         password = createPasswordHard(length)
-        salt = uuid.uuid4().hex
-        hash = hashlib.sha1(salt.encode() + password.encode()).hexdigest() + ':' + salt
+        hash = hashlib.sha1(password.encode()).hexdigest()
         print("Password: ", password)
         print("Hash: ", hash)
         f.write(hash)
@@ -82,8 +76,7 @@ def sha256(length, f):
     print("Easy Passwords: ")
     for i in range(10):
         password = createPasswordEasy(length)
-        salt = uuid.uuid4().hex
-        hash = hashlib.sha256(salt.encode() + password.encode()).hexdigest() + ':' + salt
+        hash = hashlib.sha256(password.encode()).hexdigest()
         print("Password: ", password)
         print("Hash: ", hash)
         f.write(hash)
@@ -91,8 +84,7 @@ def sha256(length, f):
     print("Medium Passwords: ")
     for i in range(10):
         password = createPasswordMedium(length)
-        salt = uuid.uuid4().hex
-        hash = hashlib.sha256(salt.encode() + password.encode()).hexdigest() + ':' + salt
+        hash = hashlib.sha256(password.encode()).hexdigest()
         print("Password: ", password)
         print("Hash: ", hash)
         f.write(hash)
@@ -100,8 +92,7 @@ def sha256(length, f):
     print("Hard Passwords: ")
     for i in range(10):
         password = createPasswordHard(length)
-        salt = uuid.uuid4().hex
-        hash = hashlib.sha256(salt.encode() + password.encode()).hexdigest() + ':' + salt
+        hash = hashlib.sha256(password.encode()).hexdigest()
         print("Password: ", password)
         print("Hash: ", hash)
         f.write(hash)
@@ -111,8 +102,7 @@ def sha512(length, f):
     print("Easy Passwords: ")
     for i in range(10):
         password = createPasswordEasy(length)
-        salt = uuid.uuid4().hex
-        hash = hashlib.sha512(salt.encode() + password.encode()).hexdigest() + ':' + salt
+        hash = hashlib.sha512(password.encode()).hexdigest()
         print("Password: ", password)
         print("Hash: ", hash)
         f.write(hash)
@@ -120,8 +110,7 @@ def sha512(length, f):
     print("Medium Passwords: ")
     for i in range(10):
         password = createPasswordMedium(length)
-        salt = uuid.uuid4().hex
-        hash = hashlib.sha512(salt.encode() + password.encode()).hexdigest() + ':' + salt
+        hash = hashlib.sha512(password.encode()).hexdigest()
         print("Password: ", password)
         print("Hash: ", hash)
         f.write(hash)
@@ -129,8 +118,7 @@ def sha512(length, f):
     print("Hard Passwords: ")
     for i in range(10):
         password = createPasswordHard(length)
-        salt = uuid.uuid4().hex
-        hash = hashlib.sha512(salt.encode() + password.encode()).hexdigest() + ':' + salt
+        hash = hashlib.sha512(password.encode()).hexdigest()
         print("Password: ", password)
         print("Hash: ", hash)
         f.write(hash)
