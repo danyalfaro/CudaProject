@@ -40,25 +40,47 @@ The first option is to run the provided python code:
 ```
 HashingProgram.py
 ```
-to create new hashes and store them in text files,
+This will create new hashes and store them in text files correctly named by the length of the password and hashing used.
 
-or you can just copy paste the text files into the HashCat binaries folder.
+The second option is to copy the text files provided in the repo and paste them into the HashCat binaries folder.
 
 After this, the environment is set-up for the tests.
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+To run the tests, very specific commands have to be used.
 
+First open the windows command line and navigate to the HashCat binaries folder where you have the hash text files.
+
+To start, we will run the first text file provided called:
 
 ```
-Give an example
+MD5hashes6.txt
 ```
 
+To do this, first write the following command:
 
-## Contributing
+```
+.\hashcat64.exe -a 3 -m 0 md5hashes6.txt ?l?l?l?l?l?l
+```
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+After the run completed, run the following command:
+
+```
+.\hashcat64.exe -a 3 -m 0 md5hashes6.txt ?h?h?h?h?h?h
+```
+
+You'll notice that the first hashes are ignored since they have already been cracked and cached in the program.
+
+Similarly, after the second test is compleated, run the following command:
+
+```
+.\hashcat64.exe -a 3 -m 0 md5hashes6.txt ?a?a?a?a?a?a
+```
+
+To gather the complete results from the project, those 3 steps were repeated for all the different lengths and hashing algorithms. 
+
+
 
 
 ## Authors
