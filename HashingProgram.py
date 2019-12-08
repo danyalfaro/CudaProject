@@ -8,7 +8,7 @@ def createPasswordEasy(length):
     return ''.join(random.choice(letters) for i in range(length))
 
 def createPasswordMedium(length):
-    lettersAndDigits = string.ascii_lowercase + string.digits
+    lettersAndDigits = string.ascii_letters + string.digits
     return ''.join(random.choice(lettersAndDigits) for i in range(length))
 
 def createPasswordHard(length):
