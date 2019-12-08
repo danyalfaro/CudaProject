@@ -80,6 +80,7 @@ Similarly, after the second test is compleated, run the following command:
 
 To gather the complete results from the project, those 3 steps were repeated for all the different lengths and hashing algorithms. 
 
+### Working With Different Algorithms
 
 For the different types of hashing algorithms, the changes made in the commands were as follows:
 
