@@ -67,7 +67,7 @@ To do this, first write the following command:
 After the run completed, run the following command:
 
 ```
-.\hashcat64.exe -a 3 -m 0 md5hashes6.txt ?h?h?h?h?h?h
+.\hashcat64.exe -a 3 -m 0 -1 ?l?d?u md5hashes6.txt ?1?1?1?1?1?1
 ```
 
 You'll notice that the first hashes are ignored since they have already been cracked and cached in the program.
